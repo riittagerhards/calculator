@@ -13,8 +13,8 @@ function createApp() {
   appElement.append(titleComponent);
   appElement.append(instructionComponent);
 
-  const firstNumber = createInputComponent("");
-  const secondNumber = createInputComponent("");
+  const firstNumber = createInputComponent("first number");
+  const secondNumber = createInputComponent("second number");
   appElement.append(firstNumber, secondNumber);
 
   const wrapperElement = createElement("div", {
@@ -29,8 +29,14 @@ function createApp() {
   const calcDiff = createButtonComponent("-", function () {
     alert(Number(firstNumber.value) - Number(secondNumber.value));
   });
+  const calcMultiply = createButtonComponent("*", function () {
+    alert(Number(firstNumber.value) * Number(secondNumber.value));
+  });
+  const calcQuotient = createButtonComponent("/", function () {
+    alert(Number(firstNumber.value) / Number(secondNumber.value));
+  });
 
-  wrapperElement.append(calcSum, calcDiff);
+  wrapperElement.append(calcSum, calcDiff, calcMultiply, calcQuotient);
 }
 
 createApp();
