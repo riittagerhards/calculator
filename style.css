@@ -69,3 +69,10 @@ h5 {
   font-size: 1rem;
   width: 2rem;
 }
+
+.result {
+  background-color: white;
+  width: 8rem;
+  font-size: 0.8rem;
+  text-align: left;
+}

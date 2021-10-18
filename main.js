@@ -25,7 +25,8 @@ function createApp() {
   appElement.append(wrapperElement);
 
   const calcSum = createButtonComponent("+", function () {
-    alert(Number(firstNumber.value) + Number(secondNumber.value));
+    const result = Number(firstNumber.value) + Number(secondNumber.value);
+    resultComponent.textContent = `Result: ${result}`;
   });
   const calcDiff = createButtonComponent("-", function () {
     alert(Number(firstNumber.value) - Number(secondNumber.value));
