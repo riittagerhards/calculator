@@ -14,8 +14,8 @@ function createApp() {
   appElement.append(titleComponent);
   appElement.append(instructionComponent);
 
-  const firstNumber = createInputComponent("first number");
-  const secondNumber = createInputComponent("second number");
+  const firstNumber = createInputComponent({ placeholder: "first number" });
+  const secondNumber = createInputComponent({ placeholder: "second number" });
   appElement.append(firstNumber, secondNumber);
 
   const wrapperElement = createElement("div", {
