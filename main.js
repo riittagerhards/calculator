@@ -25,17 +25,22 @@ function createApp() {
   appElement.append(wrapperElement);
 
   const calcSum = createButtonComponent("+", function () {
-    const result = Number(firstNumber.value) + Number(secondNumber.value);
-    resultComponent.textContent = `Result: ${result}`;
+    const resultSum = Number(firstNumber.value) + Number(secondNumber.value);
+    resultComponent.textContent = `Result: ${resultSum}`;
   });
   const calcDiff = createButtonComponent("-", function () {
-    alert(Number(firstNumber.value) - Number(secondNumber.value));
+    const resultDiff = Number(firstNumber.value) - Number(secondNumber.value);
+    resultComponent.textContent = `Result: ${resultDiff}`;
   });
   const calcMultiply = createButtonComponent("*", function () {
-    alert(Number(firstNumber.value) * Number(secondNumber.value));
+    const resultMultiply =
+      Number(firstNumber.value) * Number(secondNumber.value);
+    resultComponent.textContent = `Result: ${resultMultiply}`;
   });
   const calcQuotient = createButtonComponent("/", function () {
-    alert(Number(firstNumber.value) / Number(secondNumber.value));
+    const resultQuotient =
+      Number(firstNumber.value) / Number(secondNumber.value);
+    resultComponent.textContent = `Result: ${resultQuotient}`;
   });
 
   wrapperElement.append(calcSum, calcDiff, calcMultiply, calcQuotient);
