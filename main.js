@@ -3,6 +3,7 @@ import { createInstructionComponent } from "./lib/createInstructionComponent.js"
 import { createInputComponent } from "./lib/createInputComponent.js";
 import { createButtonComponent } from "./lib/createButtonComponent.js";
 import { createElement } from "./lib/elements.js";
+import { createResultComponent } from "./lib/createResultComponent.js";
 
 function createApp() {
   const appElement = document.querySelector("#app");
@@ -37,6 +38,9 @@ function createApp() {
   });
 
   wrapperElement.append(calcSum, calcDiff, calcMultiply, calcQuotient);
+
+  const resultComponent = createResultComponent();
+  appElement.append(resultComponent);
 }
 
 createApp();
